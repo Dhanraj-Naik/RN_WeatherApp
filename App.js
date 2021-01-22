@@ -95,7 +95,7 @@ export default class App extends React.Component {
 
     return (
       <KeyboardAvoidingView enabled={true} style={styles.container} behavior='padding'>
-        <StatusBar barStyle='dark-content' />
+        <StatusBar barStyle='light-content' />
         <ImageBackground
           source={getImageForWeather(weather)}
           style={styles.imageContainer}
