@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TextInput } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 
 export default class SearchInput extends Component {
   constructor() {
@@ -19,7 +19,7 @@ export default class SearchInput extends Component {
     const { onSubmit } = this.props;
     const { inputText } = this.state;
 
-    if (!inputText) {return;}
+    if (!inputText) { return; }
 
     onSubmit(inputText);
     this.setState({ inputText: '' });
@@ -34,10 +34,10 @@ export default class SearchInput extends Component {
         autoCorrect={false}
         placeholder={placeholder}
         value={inputText}
-        placeholderTextColor="white"
+        placeholderTextColor='white'
         style={styles.textInput}
-        underlineColorAndroid="transparent"
-        clearButtonMode="always"
+        underlineColorAndroid='transparent'
+        clearButtonMode='always'
         onChangeText={this.handleChangeText}
         onSubmitEditing={this.handleSubmitEditing}
       />
