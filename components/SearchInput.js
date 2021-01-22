@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-
+import PropTypes from 'prop-types';
 export default class SearchInput extends Component {
+
+  static propTypes = {
+    placeholder: PropTypes.string,
+    onSubmit: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    placeholder: '',
+  }
+
   constructor() {
     super();
     this.state = {
@@ -44,6 +54,18 @@ export default class SearchInput extends Component {
     );
   }
 }
+
+/*
+SearchInput.propTypes = {
+  placeholder: PropTypes.string,
+  onSubmit: PropTypes.func.isRequired,
+};
+
+SearchInput.defaultProps = {
+  placeholder: '',
+};
+
+*/
 
 const styles = StyleSheet.create({
   textInput: {
